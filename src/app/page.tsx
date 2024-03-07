@@ -24,8 +24,13 @@ export default function Home() {
         </p>
       </div>
       <DishTypeBanner />
-      <MealTypeOptions /> 
-      <div className="flex items-center justify-center p-4 cardHolder h-full border-2 border-black">
+      <MealTypeOptions />
+      {/* map the card data here */}
+      <div className="flex flex-wrap p-4 justify-evenly h-full border-2 border-black">
+        <RecipeCard />
+        <RecipeCard />
+        <RecipeCard />
+        <RecipeCard />
         <RecipeCard />
       </div>
     </main>
