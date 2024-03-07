@@ -1,11 +1,17 @@
 // import Image from "next/image";
+import { useState, useEffect, use } from "react";
+import DishTypeBanner from "./components/DishTypeBanner";
+import axios from "axios";
+import MealTypeOptions from "./components/MealTypeOptions";
 
 export default function Home() {
+
+
   return (
     <main className="">
       <div className="relative">
         <img
-          className="w-full h-1/2 object-cover"
+          className="w-full h-2/3 object-cover"
           src="/images/banner.jpeg"
           alt="banner"
         />
@@ -16,6 +22,10 @@ export default function Home() {
           All your favourite dishes all in one place!
         </p>
       </div>
+      <DishTypeBanner />
+      <MealTypeOptions /> 
     </main>
   );
 }
+
+

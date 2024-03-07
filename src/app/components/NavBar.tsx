@@ -8,7 +8,7 @@ import { MdAccountCircle } from "react-icons/md";
 const NavBar = () => {
   return (
     <div>
-      <nav className=" text-black text-xl bg-white bg-opacity-20 font-bold w-full fixed z-10 shadow-md sm:flex-row flex-col flex justify-evenly items-center ">
+      <nav className=" text-white text-xl bg-white bg-opacity-10 font-bold w-full fixed z-10 shadow-md sm:flex-row flex-col flex justify-evenly items-center ">
         <Link href="/">
           <h1 className="text-xl font-bold">R E C I P E A S</h1>
         </Link>
