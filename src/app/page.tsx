@@ -3,6 +3,7 @@ import { useState, useEffect, use } from "react";
 import DishTypeBanner from "./components/DishTypeBanner";
 import axios from "axios";
 import MealTypeOptions from "./components/MealTypeOptions";
+import RecipeCard from "./components/Cards/RecipeCard";
 
 export default function Home() {
 
@@ -24,6 +25,9 @@ export default function Home() {
       </div>
       <DishTypeBanner />
       <MealTypeOptions /> 
+      <div className="flex items-center justify-center p-4 cardHolder h-full border-2 border-black">
+        <RecipeCard />
+      </div>
     </main>
   );
 }
