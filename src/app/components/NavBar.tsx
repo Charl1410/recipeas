@@ -30,7 +30,7 @@ const NavBar = () => {
           </Link>
         </ul>
         <SearchBar />
-        <MdAccountCircle style={{ color: "blue", fontSize: "50px" }} />
+        <MdAccountCircle style={{ color: "white", fontSize: "50px" }} />
       </nav>
     </div>
   );

@@ -26,7 +26,7 @@ export default function Home() {
       <DishTypeBanner />
       <MealTypeOptions />
       {/* map the card data here */}
-      <div className="flex flex-wrap p-4 justify-evenly h-full border-2 border-black">
+      <div className="m-6 flex flex-wrap p-4 justify-evenly h-full">
         <RecipeCard />
         <RecipeCard />
         <RecipeCard />

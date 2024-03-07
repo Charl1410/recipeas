@@ -18,13 +18,13 @@ const SearchBar = () => {
         aria-describedby="search-button"
       />
       <label
-        htmlFor="search-input" // Corrected from "for" to "htmlFor"
+        htmlFor="search-input" 
         className="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-white transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[twe-input-state-active]:-translate-y-[0.9rem] peer-data-[twe-input-state-active]:scale-[0.8] motion-reduce:transition-none  dark:peer-focus:text-primary"
       >
         Search
       </label>
-      <button className="flex items-center justify-center w-16 rounded-full bg-blue-500">
-        <IoMdSearch style={{ color:"white", fontSize: "30px" }} />
+      <button className="flex items-center justify-center w-16 rounded-full bg-white">
+        <IoMdSearch style={{ color:"grey", fontSize: "30px" }} />
       </button>
     </div>
   );

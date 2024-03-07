@@ -5,22 +5,47 @@ import DishVariation from './DishVariation';
 
 const DishTypeBanner = () => {
   return (
-    <div className="asolute h-36 border-2 border-black flex flex-row justify-evenly items-center">
+    <div className="m-6 asolute h-48 border-2 flex flex-row justify-evenly items-center">
       <DishVariation />
-      <div className="items-center flex justify-center text-center rounded-full w-32 h-32 border-black border-2">
-        <p>Chinese</p>
+      <div className="relative items-center flex justify-center text-center rounded-full w-36 h-36 border-2 overflow-hidden">
+        <img
+          className="w-full h-full object-cover"
+          src="/images/chinese.jpeg"
+          alt=""
+        />
+        <p className="absolute text-white font-bold">Chinese</p>
       </div>
-      <div className="items-center flex justify-center text-center rounded-full w-32 h-32 border-black border-2">
-        <p>Japanese</p>
+      <div className="relative items-center flex justify-center text-center rounded-full w-36 h-36 border-2 overflow-hidden">
+        <img
+          className="w-full h-full object-cover"
+          src="/images/japanese.jpeg"
+          alt=""
+        />
+        <p className="absolute text-white font-bold">Japanese</p>
       </div>
-      <div className="items-center flex justify-center text-center rounded-full w-32 h-32 border-black border-2">
-        <p>Thai</p>
+      <div className="relative items-center flex justify-center text-center rounded-full w-36 h-36 border-2 overflow-hidden">
+        <img
+          className="w-full h-full object-cover"
+          src="/images/thai.jpeg"
+          alt=""
+        />
+        <p className="absolute text-white font-bold">Thai</p>
       </div>
-      <div className="items-center flex justify-center text-center rounded-full w-32 h-32 border-black border-2">
-        <p>English</p>
+      <div className="relative items-center flex justify-center text-center rounded-full w-36 h-36 border-2 overflow-hidden">
+        <img
+          className="w-full h-full object-cover"
+          src="/images/roast.jpeg"
+          alt=""
+        />
+        <p className="absolute text-white font-bold">British</p>
       </div>
-      <div className="items-center flex justify-center text-center rounded-full w-32 h-32 border-black border-2">
-        <p>Italian</p>
+      <div className="relative items-center flex justify-center text-center rounded-full w-36 h-36 border-2 overflow-hidden">
+        <img
+          className="w-full h-full object-cover"
+          src="/images/pizza.jpeg"
+          alt=""
+        />
+        <p className="absolute text-white font-bold">Italian</p>
       </div>
     </div>
   );
