@@ -4,6 +4,9 @@ import DishTypeBanner from "./components/DishTypeBanner";
 import axios from "axios";
 import MealTypeOptions from "./components/MealTypeOptions";
 import RecipeCard from "./components/Cards/RecipeCard";
+import RootLayout from "./layout";
+import RecipeBrowse from "./components/RecipeBrowse";
+import { RecipeData } from "./types";
 
 export default function Home() {
 
@@ -27,11 +30,7 @@ export default function Home() {
       <MealTypeOptions />
       {/* map the card data here */}
       <div className="m-6 flex flex-wrap p-4 justify-evenly h-full">
-        <RecipeCard />
-        <RecipeCard />
-        <RecipeCard />
-        <RecipeCard />
-        <RecipeCard />
+        <RecipeBrowse />
       </div>
     </main>
   );

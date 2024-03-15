@@ -1,20 +1,25 @@
+"use client"
+
 import React from 'react'
 import { FaHeart } from "react-icons/fa";
 import StarRating from '../StarRating';
+import { RecipeData } from '@/app/types';
 
+const RecipeCard = ({recipe: RecipeData}) => {
 
-
-const RecipeCard = () => {
   return (
-    <div className="p-1 w-2/12 h-fit border-2 border-slate-500 rounded-md ">
+    <>
+   
+       <div className="p-1 w-2/12 h-fit border-2 border-slate-500 rounded-md ">
       <div className="imageContainer">
         <img className="rounded" src="/images/lunch.jpeg" alt="" />
       </div>
+      <p></p>
       <div className="p-2">
         <div className="font-bold border-b border-gray-300">
-          <h1>Salad</h1>
+          <h1>salad</h1>
           <div className="">
-         <StarRating />
+            <StarRating />
           </div>
         </div>
         <p>
@@ -41,6 +46,8 @@ const RecipeCard = () => {
         </button>
       </div>
     </div>
+    </>
+  
   );
 }
 

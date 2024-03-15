@@ -26,7 +26,9 @@ I am currently working on a small nextjs application to display recipes! This ap
 ## Dependencies 
 This application is using: 
 
-** axios ** 
+* axios 
+* Tailwind 
+
 
 ## User Story
 
