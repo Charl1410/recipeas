@@ -7,17 +7,24 @@ import RecipeCard from "./components/Cards/RecipeCard";
 import RootLayout from "./layout";
 import RecipeBrowse from "./components/RecipeBrowse";
 import { RecipeData } from "./types";
+import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
+import Image from "next/image";
 
 export default function Home() {
 
 
   return (
     <main className="">
-      <div className="relative">
-        <img
-          className="w-full h-2/3 object-cover"
+      <NavBar />
+      <div className="relative w-full h-full">
+        <Image
+          className="object-cover"
           src="/images/banner.jpeg"
           alt="banner"
+          width={2000}
+          height={500}
+
         />
         <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-5xl font-bold">
           R E C I P E A S
@@ -32,6 +39,7 @@ export default function Home() {
       <div className="m-6 flex flex-wrap p-4 justify-evenly h-full">
         <RecipeBrowse />
       </div>
+      <Footer />
     </main>
   );
 }

@@ -4,9 +4,11 @@ import React from 'react'
 import DishVariation from './DishVariation';
 
 const DishTypeBanner = () => {
+
+
   return (
     <div className="m-6 asolute h-48 border-2 flex flex-row justify-evenly items-center">
-      <DishVariation />
+  
       <div className="relative items-center flex justify-center text-center rounded-full w-36 h-36 border-2 overflow-hidden">
         <img
           className="w-full h-full object-cover"

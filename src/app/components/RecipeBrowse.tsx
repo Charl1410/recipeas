@@ -5,10 +5,10 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { RecipeData } from '../types';
 
-const RecipeBrowse: React.FC<{ RecipeData: RecipeData }> = ({ RecipeData }) => {
+const RecipeBrowse: React.FC = () => {
   //store data here
-  const [RecipeCardData, setData] = useState(null);
-  const [recipeOne, setRecipeOne] = useState(null)
+  const [RecipeCardData, setData] = useState<any>(null);
+  const [recipeOne, setRecipeOne] = useState<any>(null)
   const apiUrl = "https://dummyjson.com/recipes";
 
   //define object 1 aka recipe 1 and try to take it through to recipeCard 
@@ -20,7 +20,7 @@ const RecipeBrowse: React.FC<{ RecipeData: RecipeData }> = ({ RecipeData }) => {
       try {
         const response = await axios.get(apiUrl);
         console.log("Response:", response.data);
-        setData(response.data);
+        setData(response.data.recipes);
         setRecipeOne(response.data.recipes[0])
       } catch (error) {
         console.error("Error:", error);
@@ -34,8 +34,11 @@ const RecipeBrowse: React.FC<{ RecipeData: RecipeData }> = ({ RecipeData }) => {
     }, [recipeOne]);
 
   return (
-    <div>
-      <RecipeCard recipe={recipeOne} />
+    <div className='flex flex-wrap justify-center intems-center flex-col lg:flex-row'>
+      {/* if there is data then map the data */}
+      {RecipeCardData && RecipeCardData.map((recipe: any, index: number) => (
+        <RecipeCard key={index} data={recipe} />
+      ))}
     </div>
   );
 };
