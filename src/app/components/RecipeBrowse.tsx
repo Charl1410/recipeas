@@ -4,38 +4,34 @@ import RecipeCard from './Cards/RecipeCard'
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { RecipeData } from '../types';
+import { getRecipes } from '../api/getRecipes'; //importing the API func
 
 const RecipeBrowse: React.FC = () => {
   //store data here
   const [RecipeCardData, setData] = useState<any>(null);
-  const [recipeOne, setRecipeOne] = useState<any>(null)
   const apiUrl = "https://dummyjson.com/recipes";
 
-  //define object 1 aka recipe 1 and try to take it through to recipeCard 
+  //define object 1 aka recipe 1 and try to take it through to recipeCard
 
   useEffect(() => {
-    console.log("effect is running");
-
-    const getData = async () => {
-      try {
-        const response = await axios.get(apiUrl);
-        console.log("Response:", response.data);
-        setData(response.data.recipes);
-        setRecipeOne(response.data.recipes[0])
-      } catch (error) {
-        console.error("Error:", error);
-      }
+    //function to fetch data 
+    const fetchData = async () => {
+      const recipes = await getRecipes(); // Call the API function
+      setData(recipes);
     };
-    getData();
+
+    fetchData();
   }, []);
 
-    useEffect(() => {
-      console.log("Recipe 1", recipeOne);
-    }, [recipeOne]);
+  useEffect(() => {
+    console.log("Recipes", RecipeCardData);
+  }, [RecipeCardData]);
 
   return (
     <>
-    <h1 className='text-center w-full font-bold text-2xl border-b border-slate-200'>Browse</h1>
+      <h1 className="text-center w-full font-bold text-2xl border-b border-slate-200">
+        Browse
+      </h1>
       <div className="flex flex-wrap justify-center intems-center flex-col lg:flex-row">
         {/* if there is data then map the data only the first 10 items  */}
         {RecipeCardData &&
