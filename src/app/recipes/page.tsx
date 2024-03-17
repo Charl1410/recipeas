@@ -6,8 +6,8 @@ const RecipePage = () => {
   return (
     <>
       <div className="bg-slate-100 h-full flex-col flex items-center justify-center">
-        <div className="bg-white w-10/12 mt-10 h-full flex flex-row rounded-xl">
-          <div className="image h-full w-4/12">
+        <div className="bg-white w-10/12 mt-10 h-full flex flex-col md:flex-row rounded-xl">
+          <div className="image h-full w-full md:w-4/12 md:h-screen">
             <img
               className="rounded-xl w-full h-full object-cover"
               src="/images/japanese.jpeg"
@@ -24,17 +24,18 @@ const RecipePage = () => {
               </h2>
             </div>
             <div className="w-full bg-slate-50 items-center mt-10 flex flex-row justify-evenly dish-details h-24">
-              <p className="border-gray-400 border-b text-lg font-bold">
+              <p className="border-gray-200 border-b text-lg font-bold">
                 300 cals
               </p>
-              <p className="border-gray-400 border-b text-lg font-bold">
-                300 cals
+            
+              <p className="border-gray-200 border-b text-lg font-bold">
+                20 mins prep time
               </p>
-              <p className="border-gray-400 border-b text-lg font-bold">
-                300 cals
+              <p className="border-gray-200 border-b text-lg font-bold">
+                15 mins cook time
               </p>
-              <p className="border-gray-400 border-b text-lg font-bold">
-                300 cals
+              <p className="border-gray-200 border-b text-lg font-bold">
+                Vegan
               </p>
             </div>
             <h1 className="mt-4 font-bold text-lg border-b border-gray-200">
@@ -73,6 +74,7 @@ const RecipePage = () => {
           </div>
         </div>
       </div>
+      
     </>
   );
 }

@@ -18,37 +18,35 @@ const RecipeCard: React.FC<RecipeCardProps> = ({data}) => {
         </div>
         <div className="p-2">
           <div className="font-bold border-b border-gray-300">
-            {data ? <h1 className='text-xl'>{data.name}</h1> : "Loading..."}
+            {data ? <h1 className="text-xl">{data.name}</h1> : "Loading..."}
             <div className="">
               <StarRating />
             </div>
           </div>
           <p className="flex flex-row">
-            <span className="text-pink-500 font-bold">Diffuculty:</span>
+            <span className="font-bold mr-1">Diffuculty:</span>
             {data ? <h1>{data.difficulty}</h1> : "Loading..."}
           </p>
           <p className="flex flex-row">
-            <span className="text-pink-500 font-bold"> Prep time:</span>
+            <span className="font-bold mr-1"> Prep time:</span>
             {data ? <h1>{data.prepTimeMinutes}</h1> : "Loading..."} mins
           </p>
           <p className="flex flex-row">
-            <span className="text-pink-500 font-bold"> Cooking time:</span>
+            <span className="font-bold mr-1"> Cooking time:</span>
             {data ? <h1>{data.cookTimeMinutes}</h1> : "Loading..."}mins
           </p>
           <p className="flex flex-row">
-            <span className="text-pink-500 font-bold">Cuisine: </span>
+            <span className="font-bold mr-1">Cuisine:</span>
             {data ? <h1>{data.cuisine}</h1> : "Loading..."}
           </p>
           <p className="flex flex-row">
-            <span className="text-pink-500 font-bold">
-              Calories per serving:
-            </span>
+            <span className="font-bold mr-1">Calories per serving:</span>
             {data ? <h1>{data.caloriesPerServing}</h1> : "Loading..."}
             cal
           </p>
         </div>
         <div className="mt-2 flex justify-center items-center">
-          <button className="border-1 border-pink-500 bg-pink-200 p-1 rounded-xl w-8/12">
+          <button className="border-1 border-pink-500 bg-slate-200 p-1 rounded-xl w-8/12">
             View full recipe
           </button>
           <button>
