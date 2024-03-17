@@ -7,8 +7,7 @@ const DishTypeBanner = () => {
 
 
   return (
-    <div className="m-6 asolute h-48 border-2 flex flex-row justify-evenly items-center">
-  
+    <div className="w-full m-6 absolute bottom-0 left-1/2 transform -translate-x-1/2 z-10 h-48 flex flex-row justify-evenly items-center">
       <div className="relative items-center flex justify-center text-center rounded-full w-36 h-36 border-2 overflow-hidden">
         <img
           className="w-full h-full object-cover"
@@ -40,6 +39,22 @@ const DishTypeBanner = () => {
           alt=""
         />
         <p className="absolute text-white font-bold">British</p>
+      </div>
+      <div className="relative items-center flex justify-center text-center rounded-full w-36 h-36 border-2 overflow-hidden">
+        <img
+          className="w-full h-full object-cover"
+          src="/images/pizza.jpeg"
+          alt=""
+        />
+        <p className="absolute text-white font-bold">Italian</p>
+      </div>
+      <div className="relative items-center flex justify-center text-center rounded-full w-36 h-36 border-2 overflow-hidden">
+        <img
+          className="w-full h-full object-cover"
+          src="/images/pizza.jpeg"
+          alt=""
+        />
+        <p className="absolute text-white font-bold">Italian</p>
       </div>
       <div className="relative items-center flex justify-center text-center rounded-full w-36 h-36 border-2 overflow-hidden">
         <img

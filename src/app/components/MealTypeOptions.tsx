@@ -2,11 +2,10 @@ import React from 'react'
 
 const MealTypeOptions = () => {
   return (
-    
     <div className="p-6 flex md:flex-row flex-wrap justify-center items-center bg-slate-100 flex-col">
-      <div className="h-96 border-2 border-black m-6 hover:transform hover:-translate-y-2 transition-transform duration-300 ease-in-out relative md:w-3/12 mr-6">
+      <div className="m-6 hover:transform hover:-translate-y-2 transition-transform duration-300 ease-in-out relative h-96 w-full md:w-3/12 ">
         <img
-          className="rounded-xl w-full h-full object-cover"
+          className="w-full h-full object-cover rounded-xl"
           src="/images/breakfast.jpeg"
           alt="breakfast"
         />

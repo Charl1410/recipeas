@@ -20,7 +20,6 @@ export default function Home() {
       <div className="relative w-full h-full">
         <Banner />
       </div>
-      <DishTypeBanner />
       <MealTypeOptions />
       {/* map the card data here */}
       <div className="m-6 flex flex-wrap p-4 justify-evenly h-full">

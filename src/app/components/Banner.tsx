@@ -1,11 +1,12 @@
 import React from "react";
 import Image from "next/image";
+import DishTypeBanner from "./DishTypeBanner";
 
 const Banner = () => {
   return (
-    <div className="bannerContainer w-full h-96 border-2 border-black overflow-hidden">
+    <div className="bannerContainer w-full border-2 border-black overflow-hidden">
       <Image
-        className="object-cover "
+        className="object-cover h-4/6"
         src="/images/banner.jpeg"
         alt="banner"
         width={2000}
@@ -17,6 +18,7 @@ const Banner = () => {
       <p className="absolute mt-12 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-xl">
         All your favourite dishes all in one place!
       </p>
+      <DishTypeBanner />
     </div>
   );
 };
