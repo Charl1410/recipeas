@@ -16,3 +16,11 @@ export interface RecipeData {
   reviewCount: number;
   mealType: string[];
 }
+
+interface Params {
+  [key: string]: string;
+}
+
+interface SingleRecipeProps {
+  params: Params;
+}

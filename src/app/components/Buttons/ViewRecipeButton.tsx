@@ -1,11 +1,12 @@
 "use client";
-
 import React from "react";
 import { useRouter } from "next/navigation";
+import { RecipeData } from "@/app/types";
 
+// const SingleRecipe: React.FC<RecipeData> = ({
 //dynamic route 
 //this function will take in the id of the recipe 
-const ViewRecipeButton = ({id}) => {
+const ViewRecipeButton: React.FC<RecipeData> = ({id}) => {
 
     //this will change the route taking in the id as a prop
     const router = useRouter()
