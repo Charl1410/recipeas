@@ -4,9 +4,9 @@ import DishTypeBanner from "./DishTypeBanner";
 
 const Banner = () => {
   return (
-    <div className="bannerContainer w-full border-2 border-black overflow-hidden">
+    <div className="h-96 bannerContainer w-full border-2 border-black overflow-hidden">
       <Image
-        className="object-cover h-4/6"
+        className="object-cover"
         src="/images/banner.jpeg"
         alt="banner"
         width={2000}

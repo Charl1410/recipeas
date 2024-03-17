@@ -1,0 +1,7 @@
+.clip-path {
+    clip-path: polygon(100% 6%, 100% 75%, 0 100%, 0 26%);
+}
+
+.height-40 {
+    height: 50rem;
+}
