@@ -10,9 +10,7 @@ const RecipeBrowse: React.FC = () => {
   //store data here
   const [RecipeCardData, setData] = useState<any>(null);
   const apiUrl = "https://dummyjson.com/recipes";
-
-  //define object 1 aka recipe 1 and try to take it through to recipeCard
-
+  
   useEffect(() => {
     //function to fetch data 
     const fetchData = async () => {

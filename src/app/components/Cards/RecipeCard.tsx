@@ -1,8 +1,8 @@
-"use client"
-import React from 'react'
+               import React from 'react'
 import { FaHeart } from "react-icons/fa";
 import StarRating from '../StarRating';
 import { RecipeData } from '@/app/types';
+import ViewRecipeButton from '../Buttons/ViewRecipeButton';
 
 //passing in the data types into the component 
 interface RecipeCardProps {
@@ -46,9 +46,7 @@ const RecipeCard: React.FC<RecipeCardProps> = ({data}) => {
           </p>
         </div>
         <div className="mt-2 flex justify-center items-center">
-          <button className="border-1 border-pink-500 bg-slate-200 p-1 rounded-xl w-8/12">
-            View full recipe
-          </button>
+          <ViewRecipeButton />
           <button>
             <FaHeart className="ml-4" />
           </button>
