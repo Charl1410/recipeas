@@ -1,4 +1,5 @@
-               import React from 'react'
+"use client"
+import React from 'react'
 import { FaHeart } from "react-icons/fa";
 import StarRating from '../StarRating';
 import { RecipeData } from '@/app/types';
@@ -12,9 +13,9 @@ interface RecipeCardProps {
 const RecipeCard: React.FC<RecipeCardProps> = ({data}) => {
   return (
     <>
-      <div className="p-2 m-3 lg:w-2/12 h-fit border-2 border-slate-200 rounded-md">
-        <div className="imageContainer">
-          <img className="rounded" src={data.image} alt="" />
+      <div className="p-2 m-3 w-full md:w-3/12 h-fit border-2 border-slate-200 rounded-md">
+        <div className="h-36 overflow-hidden flex items-center justify-center md:h-full">
+          <img className="rounded" src={data.image} alt="recipe image" />
         </div>
         <div className="p-2">
           <div className="font-bold border-b border-gray-300">

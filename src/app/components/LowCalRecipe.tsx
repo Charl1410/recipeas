@@ -6,6 +6,7 @@ const LowCalRecipe = () => {
       {/* <h1 className="text-center w-full font-bold text-2xl border-b border-slate-200">
         Low Calorie Meals
       </h1> */}
+
     </div>
   );
 }

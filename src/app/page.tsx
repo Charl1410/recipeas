@@ -9,7 +9,7 @@ import RecipeBrowse from "./components/RecipeBrowse";
 import { RecipeData } from "./types";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
-import Banner from "./components/Banner";
+import Banner from "./components/Banners/HomeBanner";
 import LowCalRecipe from "./components/LowCalRecipe";
 
 export default function Home() {
@@ -20,10 +20,11 @@ export default function Home() {
       <NavBar />
       <div className="relative w-full h-full">
         <Banner />
+        <DishTypeBanner />
       </div>
       <MealTypeOptions />
       {/* map the card data here */}
-      <div className="m-6 flex flex-wrap p-4 justify-evenly h-full">
+      <div className="m-6 flex flex-wrap justify-evenly h-full">
         <RecipeBrowse />
         <LowCalRecipe />
       </div>

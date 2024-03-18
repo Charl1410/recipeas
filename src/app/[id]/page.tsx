@@ -24,9 +24,7 @@ const SingleRecipe: React.FC<SingleRecipeProps> = async ({ params }) => {
   console.log(params);
     const recipe = await getRecipe(params.id);
     console.log({recipe})
-  return (
-
-  );
+  return;
     
    
 };
