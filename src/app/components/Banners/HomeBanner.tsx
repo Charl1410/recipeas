@@ -4,7 +4,7 @@ import DishTypeBanner from "../DishTypeBanner";
 
 const Banner = () => {
   return (
-    <div className="relative h-96 bannerContainer w-full overflow-hidden">
+    <div className="shadow-md relative h-96 bannerContainer w-full overflow-hidden">
       <Image
         className="object-cover"
         src="/images/banner.jpeg"

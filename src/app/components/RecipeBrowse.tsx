@@ -26,11 +26,11 @@ const RecipeBrowse: React.FC = () => {
   }, [RecipeCardData]);
 
   return (
-    <div>
+    <div className=''>
       <h1 className="text-center w-full font-bold text-2xl border-b border-slate-200">
         Browse
       </h1>
-      <div className="flex flex-wrap justify-center items-center flex-col md:flex-row">
+      <div className="w-full flex flex-wrap justify-center items-center flex-col md:flex-row">
         {/* if there is data then map the data only the first 10 items  */}
         {RecipeCardData &&
           RecipeCardData.slice(0, 10).map((recipe: any, index: number) => (

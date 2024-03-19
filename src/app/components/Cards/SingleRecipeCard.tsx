@@ -1,7 +1,7 @@
 import React from 'react'
-import { RecipeData } from '../types';
+import { RecipeData } from '../../types';
 
-const SingleRecipe: React.FC<RecipeData> = ({
+const SingleRecipeCard: React.FC<RecipeData> = ({
   name,
   cuisine,
   prepTimeMinutes,
@@ -79,4 +79,4 @@ const SingleRecipe: React.FC<RecipeData> = ({
   );
 };
 
-export default SingleRecipe
+export default SingleRecipeCard
