@@ -34,6 +34,9 @@ const SingleRecipe: React.FC<SingleRecipeProps> = async ({ params }) => {
         prepTimeMinutes={recipe.prepTimeMinutes}
         cookTimeMinutes={recipe.cookTimeMinutes}
         caloriesPerServing={recipe.caloriesPerServing}
+        instructions={recipe.instructions}
+        ingredients={recipe.ingredients}
+        image={recipe.image}
       />
     </>
   );

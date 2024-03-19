@@ -17,10 +17,10 @@ export interface RecipeData {
   mealType: string[];
 }
 
-interface Params {
+export interface Params {
   [key: string]: string;
 }
 
-interface SingleRecipeProps {
+export interface SingleRecipeProps {
   params: Params;
 }
