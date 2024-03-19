@@ -13,7 +13,7 @@ const SingleRecipeCard: React.FC<RecipeData> = ({
 }) => {
   return (
     <div className="bg-slate-100 h-full flex-col flex items-center justify-center">
-      <div className="mb-10  gbg-white w-10/12 mt-10 h-full flex flex-col md:flex-row rounded-xl">
+      <div className="bg-white mb-10 gbg-white w-10/12 mt-10 h-full flex flex-col md:flex-row rounded-xl">
         <div className="image h-full w-full md:w-4/12 md:h-screen">
           <img
             className="rounded-xl w-full h-full object-cover"

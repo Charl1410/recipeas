@@ -1,8 +1,8 @@
 import React from "react";
 import axios from "axios";
-import SingleRecipeCard from "../components/Cards/SingleRecipeCard";
-import { SingleRecipeProps } from "../types";
-import { RecipeData } from "../types";
+import SingleRecipeCard from "../../components/Cards/SingleRecipeCard";
+import { SingleRecipeProps } from "../../types";
+import { RecipeData } from "../../types";
 
 //Generate static parameters axios request to get data for dynamic route
 export async function generateStaticParams() {

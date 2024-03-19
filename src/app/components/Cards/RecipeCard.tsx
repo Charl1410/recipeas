@@ -14,7 +14,7 @@ const RecipeCard: React.FC<RecipeCardProps> = ({data}) => {
   return (
     <>
       <div className="p-2 m-3 w-full md:w-80 h-fit border-2 border-slate-200 rounded-md">
-        <div className="h-36 overflow-hidden flex items-center justify-center md:h-full">
+        <div className=" h-36 overflow-hidden flex items-center justify-center md:h-full">
           <img className="rounded" src={data.image} alt="recipe image" />
         </div>
         <div className="p-2">
@@ -47,7 +47,7 @@ const RecipeCard: React.FC<RecipeCardProps> = ({data}) => {
           </p>
         </div>
         <div className="mt-2 flex justify-center items-center">
-          <ViewRecipeButton />
+          <ViewRecipeButton id={data.id} />
           <button>
             <FaHeart className="ml-4" />
           </button>

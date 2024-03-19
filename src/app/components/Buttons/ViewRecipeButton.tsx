@@ -3,8 +3,6 @@ import React from "react";
 import { useRouter } from "next/navigation";
 import { RecipeData } from "@/app/types";
 
-// const SingleRecipe: React.FC<RecipeData> = ({
-//dynamic route 
 //this function will take in the id of the recipe 
 const ViewRecipeButton: React.FC<RecipeData> = ({id}) => {
 
