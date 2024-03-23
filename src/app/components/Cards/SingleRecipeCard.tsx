@@ -28,13 +28,24 @@ const SingleRecipeCard: React.FC<RecipeData> = ({
         </Link>
       </div>
 
-      <div className="bg-white mb-10 gbg-white w-10/12 mt-10 h-full flex flex-col md:flex-row rounded-xl">
-        <div className="image h-full w-full md:w-4/12 md:h-screen">
+      <div className="bg-white mb-10 gbg-white w-10/12 mt-10 h-full flex flex-col md:flex-row rounded-xl shadow-lg">
+        <div className="image h-full w-full md:w-4/12 md:h-full">
           <img
             className="rounded-xl w-full h-full object-cover"
             src={image}
             alt="recipe image"
           />
+          <div className="p-10 w-full items-center mt-10 flex flex-col md:flex-row justify-evenly dish-details h-full">
+            <p className="mb-2 border-gray-200 border-b text-sm ">
+              {caloriesPerServing} cals
+            </p>
+            <p className="mb-2 border-gray-200 border-b text-sm">
+              {prepTimeMinutes} mins prep time
+            </p>
+            <p className="mb-2 border-gray-200 border-b text-sm">
+              {cookTimeMinutes} mins cook time
+            </p>
+          </div>
         </div>
         <div className="p-6 recipe h-full w-full md:w-8/12">
           <div className="bg-white flex flex-col h-full mt-4 w-11/12">
@@ -45,18 +56,7 @@ const SingleRecipeCard: React.FC<RecipeData> = ({
               {cuisine}
             </h2>
           </div>
-          <div className="p-10 w-full bg-slate-50 items-center mt-10 flex flex-col md:flex-row justify-evenly dish-details h-full">
-            <p className="mb-2 border-gray-200 border-b text-lg font-bold">
-              {caloriesPerServing} cals
-            </p>
-            <p className="mb-2 border-gray-200 border-b text-lg font-bold">
-              {prepTimeMinutes} mins prep time
-            </p>
-            <p className="mb-2 border-gray-200 border-b text-lg font-bold">
-              {cookTimeMinutes} mins cook time
-            </p>
-            <p className="border-gray-200 border-b text-lg font-bold">Vegan</p>
-          </div>
+
           <div className="">
             <h1 className="mt-4 font-bold text-lg border-b border-gray-200">
               Ingredients

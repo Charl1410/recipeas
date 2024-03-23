@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { RecipeData } from '../types';
 import { getRecipes } from '../api/getRecipes'; //importing the API func
+import MaxWidth from './MaxWidth';
 
 const RecipeBrowse: React.FC = () => {
   //store data here
@@ -26,7 +27,7 @@ const RecipeBrowse: React.FC = () => {
   }, [RecipeCardData]);
 
   return (
-    <div className=''>
+    <div className='mt-10'>
       <h1 className="text-center w-full font-bold text-2xl border-b border-slate-200">
         Browse
       </h1>

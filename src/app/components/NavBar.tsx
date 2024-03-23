@@ -19,7 +19,7 @@ const NavBar = () => {
     <div className="top-0 bg-white">
       <nav className="h-full hidden md:flex text-black bg-opacity-10 w-full z-10 shadow-md sm:flex-row flex-col justify-evenly items-center ">
         <Link href="/">
-          <h1 className="text-xl">R E C I P E A S</h1>
+          <img src="/images/logo.png" className="text-xl w-32 h-14"></img>
         </Link>
         <ul className="flex-end flex sm:flex-row flex-col items-center justify-evenly w-8/12 md:w-full">
           <Link href="/recipes">

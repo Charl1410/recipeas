@@ -3,7 +3,7 @@ import { Card, Image, Text, Badge, Button, Group } from "@mantine/core";
 function LowCalCard() {
   return (
     <Card shadow="sm" padding="lg" radius="md" withBorder>
-      <Card.Section component="a" href="https://mantine.dev/">
+      <Card.Section component="a" href="/">
         <Image
           src="/images/pizza.jpeg"
           height={160}

@@ -58,20 +58,9 @@ const Footer = () => {
 
       <div className="mx-6 py-10 text-center md:text-left flex justify-evenly">
         <div className="w-8/12   grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-          <div className=" ">
-            <h6 className="mb-4 flex items-center justify-center font-semibold uppercase md:justify-start">
-              <span className="me-3 [&>svg]:h-4 [&>svg]:w-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path d="M12.378 1.602a.75.75 0 00-.756 0L3 6.632l9 5.25 9-5.25-8.622-5.03zM21.75 7.93l-9 5.25v9l8.628-5.032a.75.75 0 00.372-.648V7.93zM11.25 22.18v-9l-9-5.25v8.57a.75.75 0 00.372.648l8.628 5.033z" />
-                </svg>
-              </span>
-              TW Elements
-            </h6>
-            <p>Here with recipeas you can save all your favourites.</p>
+          <div className="flex justify-center flex-col text-center">
+            <img src="/images/titleLogo.png" alt="logo" />
+            <p>Here to help you find all your favourite recipes!</p>
           </div>
           <div>
             <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
@@ -106,8 +95,11 @@ const Footer = () => {
             <p className="mb-4">
               <a href="#!">Orders</a>
             </p>
-            <p>
+            <p className='mb-4'>
               <a href="#!">Help</a>
+            </p>
+            <p>
+              <a href="#!">Contact Us </a>
             </p>
           </div>
           <div>
@@ -125,7 +117,7 @@ const Footer = () => {
                   <path d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
                 </svg>
               </span>
-              New York, NY 10012, US
+              Birmingham based
             </p>
             <p className="mb-4 flex items-center justify-center md:justify-start">
               <span className="me-3 [&>svg]:h-5 [&>svg]:w-5">
@@ -162,7 +154,6 @@ const Footer = () => {
       <div className="bg-black/5 p-6 text-center">
         <span>© 2023 Copyright:</span>
         <a className="font-semibold" href="https://tw-elements.com/">
-          {" "}
           Charlotte Griffin
         </a>
       </div>
