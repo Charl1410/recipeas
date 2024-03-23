@@ -23,7 +23,7 @@ export default function Home() {
       </div>
       <MealTypeOptions />
       {/* map the card data here */}
-      <div className="m-6 flex flex-wrap justify-evenly h-full">
+      <div className="flex flex-wrap justify-evenly h-full">
         <RecipeBrowse />
         <LowCalRecipe />
       </div>
