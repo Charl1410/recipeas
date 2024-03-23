@@ -13,11 +13,11 @@ interface RecipeCardProps {
 const RecipeCard: React.FC<RecipeCardProps> = ({data}) => {
   return (
     <>
-      <div className="p-2 m-3 w-full md:w-80 h-fit border-2 border-slate-200 rounded-md">
+      <div className="m-3 w-full md:w-80 h-fit rounded-md shadow-md">
         <div className=" h-36 overflow-hidden flex items-center justify-center md:h-full">
           <img className="rounded" src={data.image} alt="recipe image" />
         </div>
-        <div className="p-2">
+        <div className="p-4">
           <div className="font-bold border-b border-gray-300">
             {data ? <h1 className="text-xl">{data.name}</h1> : "Loading..."}
             <div className="">
@@ -45,13 +45,14 @@ const RecipeCard: React.FC<RecipeCardProps> = ({data}) => {
             {data ? <h1>{data.caloriesPerServing}</h1> : "Loading..."}
             cal
           </p>
+          <div className="mt-2 flex justify-center items-center">
+            <ViewRecipeButton id={data.id} />
+            <button>
+              <FaHeart className="ml-4" />
+            </button>
+           </div>
         </div>
-        <div className="mt-2 flex justify-center items-center">
-          <ViewRecipeButton id={data.id} />
-          <button>
-            <FaHeart className="ml-4" />
-          </button>
-        </div>
+      
       </div>
     </>
   );

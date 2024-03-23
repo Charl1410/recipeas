@@ -1,5 +1,8 @@
 import React from 'react'
 import { RecipeData } from '../../types';
+import Link from 'next/link';
+import { IoIosArrowRoundBack } from "react-icons/io";
+
 
 const SingleRecipeCard: React.FC<RecipeData> = ({
   name,
@@ -13,12 +16,24 @@ const SingleRecipeCard: React.FC<RecipeData> = ({
 }) => {
   return (
     <div className="bg-slate-100 h-full flex-col flex items-center justify-center">
+      <div className="flex flex-row">
+        <Link href="/">
+          <p className="flex flex-row items-center justify-center">
+            <IoIosArrowRoundBack
+              style={{ color: "black", fontSize: "30px" }}
+              className="mr-2"
+            />
+            Back to home
+          </p>
+        </Link>
+      </div>
+
       <div className="bg-white mb-10 gbg-white w-10/12 mt-10 h-full flex flex-col md:flex-row rounded-xl">
         <div className="image h-full w-full md:w-4/12 md:h-screen">
           <img
             className="rounded-xl w-full h-full object-cover"
             src={image}
-            alt=""
+            alt="recipe image"
           />
         </div>
         <div className="p-6 recipe h-full w-full md:w-8/12">

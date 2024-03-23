@@ -16,29 +16,33 @@ const NavBar = () => {
   }
 
   return (
-    <div className="relative bg-white">
-      <nav className="hidden md:flex text-black bg-opacity-10 w-full z-10 shadow-md sm:flex-row flex-col justify-evenly items-center ">
+    <div className="top-0 bg-white">
+      <nav className="h-full hidden md:flex text-black bg-opacity-10 w-full z-10 shadow-md sm:flex-row flex-col justify-evenly items-center ">
         <Link href="/">
           <h1 className="text-xl">R E C I P E A S</h1>
         </Link>
         <ul className="flex-end flex sm:flex-row flex-col items-center justify-evenly w-8/12 md:w-full">
-          <Link href="/">
-            <li>Homepage</li>
-          </Link>
           <Link href="/recipes">
             <li>Recipes</li>
           </Link>
           <Link href="/discover">
-            <li>Discover</li>
+            <li>Discover All Recipes</li>
           </Link>
           <Link href="/favourites">
             <li>My favourites</li>
           </Link>
           <Link href="/favourites">
-            <li>My favourites</li>
+            <li>Contact Me</li>
           </Link>
         </ul>
         <SearchBar />
+        <button
+          type="button"
+          className=" m-2 w-24 h-10 text-xs text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-lg px-5 py-2.5 text-center me-2 mb-2"
+        >
+          Log in
+        </button>
+
         <MdAccountCircle style={{ color: "#cfcfcf", fontSize: "50px" }} />
       </nav>
 

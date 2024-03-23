@@ -17,7 +17,6 @@ export default function Home() {
 
   return (
     <main className="">
-      <NavBar />
       <div className="relative w-full h-full">
         <Banner />
         <DishTypeBanner />
@@ -28,7 +27,6 @@ export default function Home() {
         <RecipeBrowse />
         <LowCalRecipe />
       </div>
-      <Footer />
     </main>
   );
 }
