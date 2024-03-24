@@ -31,7 +31,7 @@ const NavBar = () => {
           <Link href="/favourites">
             <li>My favourites</li>
           </Link>
-          <Link href="/favourites">
+          <Link href="/contact">
             <li>Contact Me</li>
           </Link>
         </ul>
