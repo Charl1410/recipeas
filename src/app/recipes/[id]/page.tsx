@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import SingleRecipeCard from "../../components/Cards/SingleRecipeCard";
 import { SingleRecipeProps } from "../../types";
-import { RecipeData } from "../../types";
+// import { RecipeData } from "../../types";
 
 //Generate static parameters axios request to get data for dynamic route
 export async function generateStaticParams() {
@@ -28,16 +28,19 @@ const SingleRecipe: React.FC<SingleRecipeProps> = async ({ params }) => {
     console.log({recipe})
   return (
     <>
-      <SingleRecipeCard
-        name={recipe.name}
-        cuisine={recipe.cuisine}
-        prepTimeMinutes={recipe.prepTimeMinutes}
-        cookTimeMinutes={recipe.cookTimeMinutes}
-        caloriesPerServing={recipe.caloriesPerServing}
-        instructions={recipe.instructions}
-        ingredients={recipe.ingredients}
-        image={recipe.image}
-      />
+      <div>
+        <SingleRecipeCard
+          name={recipe.name}
+          cuisine={recipe.cuisine}
+          prepTimeMinutes={recipe.prepTimeMinutes}
+          cookTimeMinutes={recipe.cookTimeMinutes}
+          caloriesPerServing={recipe.caloriesPerServing}
+          instructions={recipe.instructions}
+          ingredients={recipe.ingredients}
+          image={recipe.image}
+          rating={recipe.rating}
+        />
+      </div>
     </>
   );
     

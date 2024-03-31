@@ -38,7 +38,7 @@ const ContactPage = () => {
             <div className="w-full flex justify-center">
               <div className="w-full flex flex-col mt-8">
                 <label className="font-semibold leading-none">Message</label>
-                <textarea className="h-40 text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-blue-700 mt-4 bg-white border rounded border-gray-200"></textarea>
+                <textarea className="h-40 text-base leading-none text-gray-900 p-4 focus:oultine-none focus:border-blue-700 mt-4 bg-white border rounded border-gray-200"></textarea>
               </div>
             </div>
             <p className="text-xs mt-4">
