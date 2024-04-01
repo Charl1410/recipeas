@@ -2,15 +2,13 @@
 import React from 'react'
 import RecipeCard from './Cards/RecipeCard'
 import { useState, useEffect } from "react";
-import axios from "axios";
-import { RecipeData } from '../types';
 import { getRecipes } from '../api/getRecipes'; //importing the API func
-import MaxWidth from './MaxWidth';
+
 
 const RecipeBrowse: React.FC = () => {
+
   //store data here
   const [RecipeCardData, setData] = useState<any>(null);
-  const apiUrl = "https://dummyjson.com/recipes";
 
   useEffect(() => {
     //function to fetch data 
@@ -22,20 +20,23 @@ const RecipeBrowse: React.FC = () => {
     fetchData();
   }, []);
 
-  useEffect(() => {
-    console.log("Recipes", RecipeCardData);
-  }, [RecipeCardData]);
+  // if (RecipeCardData === undefined) {
+  //   return null;
+  // }
 
   return (
-    <div className='mt-10 border-t border-slate-200'>
-      <div className="w-full flex flex-wrap justify-center items-center flex-col md:flex-row">
-        {/* if there is data then map the data only the first 10 items  */}
-        {RecipeCardData &&
-          RecipeCardData.map((recipe: any, index: number) => (
-            <RecipeCard key={index} data={recipe} />
-          ))}
-      </div>
-    </div>
+    <>
+        <div className="mt-10 border-t border-slate-200">
+          <div className="w-full flex flex-wrap justify-center items-center flex-col md:flex-row">
+            {/* if there is data then map the data only the first 10 items  */}
+            {RecipeCardData &&
+              RecipeCardData.map((recipe: any, index: number) => (
+                <RecipeCard key={index} data={recipe} />
+              ))}
+          </div>
+        </div>
+     
+    </>
   );
 };
 

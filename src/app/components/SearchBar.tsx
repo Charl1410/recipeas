@@ -1,32 +1,35 @@
-import React from 'react'
+'use client'
+import React, { useState, useEffect } from 'react'
 import { IoMdSearch } from "react-icons/io";
+import { Popover, Button, TextInput } from "@mantine/core";
+import { getRecipes } from '../api/getRecipes'; //importing the API func
 
+const SearchBar: React.FC = () => {
 
-const SearchBar = () => {
+  //Creating a function to filter the data and then display the searched for data 
+  
+
   return (
-    <div
-      className=" relative flex rounded-xl"
-      data-twe-input-wrapper-init
-      data-twe-input-group-ref
-    >
-      <input
-        type="search"
-        className="text-black peer block min-h-[auto] w-full rounded bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0"
-        placeholder="Search"
-        aria-label="Search"
-        id="search-input"
-        aria-describedby="search-button"
-      />
-      <label
-        htmlFor="search-input"
-        className="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-black transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[twe-input-state-active]:-translate-y-[0.9rem] peer-data-[twe-input-state-active]:scale-[0.8] motion-reduce:transition-none  dark:peer-focus:text-primary"
-      >
-        Search
-      </label>
-      <button className="flex items-center justify-center w-16 rounded-full bg-slate-200">
-        <IoMdSearch style={{ color: "black", fontSize: "30px" }} />
-      </button>
-    </div>
+    <>
+      <Popover width={300} trapFocus position="bottom" withArrow shadow="md">
+        <Popover.Target>
+          <Button>
+            <IoMdSearch size={20} />
+          </Button>
+        </Popover.Target>
+        <Popover.Dropdown
+         className="h-96 rounded-xl">
+          <TextInput
+            label="Search"
+            description="Seach for a recipe"
+            placeholder="Search...."
+          />
+          <div>
+          
+          </div>
+        </Popover.Dropdown>
+      </Popover>
+    </>
   );
 }
 

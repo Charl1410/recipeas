@@ -2,6 +2,11 @@ import React from 'react'
 import { RecipeData } from '../../types';
 import Link from 'next/link';
 import { IoIosArrowRoundBack } from "react-icons/io";
+import { IoFastFoodOutline, IoTimerOutline } from "react-icons/io5";
+import { FaRegFlag } from "react-icons/fa";
+
+
+
 
 
 const SingleRecipeCard: React.FC<RecipeData> = ({
@@ -39,22 +44,27 @@ const SingleRecipeCard: React.FC<RecipeData> = ({
           <div className="">{rating}</div>
         </div>
         <div className="p-6 recipe h-full w-full md:w-8/12">
-          <div className="bg-white flex flex-col h-full mt-4 w-11/12">
+          <div className="bg-white flex flex-col h-full mt-4 w-full">
             <h1 className="text-center w-full flex justify-center items-center text-4xl font-bold border-b border-gray-400">
               {name}
             </h1>
           </div>
-          <div className="p-10 w-full items-center flex flex-col md:flex-row justify-evenly dish-details h-full">
-            <div className="mb-2 w-fit p-1.5 border-gray-200 bg-slate-300 rounded-full border-b text-sm ">
+          <div className="p-10 w-full items-center flex flex-row justify-evenly dish-details h-full">
+            <div className="flex flex-col justify-center items-center mb-2 w-fit p-2 border-gray-200 bg-slate-50 rounded-full border-b text-sm ">
+              <IoFastFoodOutline />
               {caloriesPerServing} cals
             </div>
-            <div className="mb-2 w-fit p-1.5 border-gray-200 bg-slate-300 rounded-full border-b text-sm">
+            <div className="flex flex-col justify-center items-center mb-2 w-fit p-2 border-gray-200 bg-slate-50 rounded-full border-b text-sm">
+              <IoTimerOutline />
               {prepTimeMinutes} mins prep time
             </div>
-            <div className="mb-2 w-fit p-1.5 border-gray-200 bg-slate-300 rounded-full border-b text-sm">
+            <div className="flex flex-col justify-center items-center mb-2 w-fit p-2 border-gray-200 bg-slate-50 rounded-full border-b text-sm">
+              <IoTimerOutline />
               {cookTimeMinutes} mins cook time
             </div>
-            <div className="mb-2 w-fit p-1.5 border-gray-200 bg-slate-300 rounded-full border-b text-sm">
+            <div className="flex flex-col justify-center items-center mb-2 w-fit p-2 border-gray-200 bg-slate-50 rounded-full border-b text-sm">
+              <FaRegFlag />
+
               {cuisine}
             </div>
           </div>
@@ -64,7 +74,7 @@ const SingleRecipeCard: React.FC<RecipeData> = ({
             </h1>
             <ul className="">
               {ingredients.map((ingredient, index) => (
-                <li key={index} className="mt-2">
+                <li key={index} className=" mt-2">
                   {ingredient}
                 </li>
               ))}

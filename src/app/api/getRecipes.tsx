@@ -6,11 +6,10 @@ const apiUrl = "https://dummyjson.com/recipes";
 export async function getRecipes() {
     try {
         const response= await axios.get(apiUrl);
-        // console.log("api res" + response.data.recipes)
         return response.data.recipes;
     } catch (error) {
         console.error("Error:", error);
         return null;
     }
-
 }
+

@@ -7,14 +7,11 @@ import RecipeCard from "./components/Cards/RecipeCard";
 import RootLayout from "./layout";
 import RecipeBrowse from "./components/RecipeBrowse";
 import { RecipeData } from "./types";
-import NavBar from "./components/NavBar";
-import Footer from "./components/Footer";
 import Banner from "./components/Banners/HomeBanner";
 import LowCalRecipe from "./components/LowCalRecipe";
 
+
 export default function Home() {
-
-
   return (
     <main className="">
       <div className="relative w-full h-full">

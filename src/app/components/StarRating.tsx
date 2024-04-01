@@ -5,10 +5,7 @@ const StarRating = () => {
   return (
     <div className="flex flex-row mb-4">
       <IoIosStarOutline style={{ color: "#fff01c" }} />
-      <IoIosStarOutline style={{ color: "#fff01c" }} />
-      <IoIosStarOutline style={{ color: "#fff01c" }} />
-      <IoIosStarOutline style={{ color: "#fff01c" }} />
-      <IoIosStarOutline style={{ color: "#fff01c" }} />
+     
     </div>
   );
 }

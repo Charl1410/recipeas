@@ -6,7 +6,6 @@ import { SingleRecipeProps } from "../../types";
 
 //Generate static parameters axios request to get data for dynamic route
 export async function generateStaticParams() {
-     
         //making api call 
        const response = await axios.get("https://dummyjson.com/recipes");
        return response.data.recipes.map((recipe: any) => ({
