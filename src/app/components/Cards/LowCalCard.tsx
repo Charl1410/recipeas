@@ -4,17 +4,20 @@ import { RecipeData } from "../../types";
 
 const LowCalCard: React.FC<RecipeData> = ({data}) => {
   return (
-    <Card shadow="sm" padding="lg" radius="md" withBorder>
+    <Card
+      shadow="sm"
+      padding="lg"
+      radius="md"
+      withBorder
+    >
       <Card.Section component="a" href="/">
-        <Image
-          src={data.image}
-          height={160}
-          alt="recipe image"
-        />
+        <div className="imageContainer h-40 w-full">
+          <Image src={data.image} height={50} alt="recipe image" />
+        </div>
       </Card.Section>
 
       <Group justify="space-between" mt="md" mb="xs">
-        <Text fw={500}>{data.name}</Text>
+        <Text color="dimmed" fw={500}>{data.name}</Text>
         <Badge color="pink">{data.caloriesPerServing}</Badge>
       </Group>
 

@@ -34,19 +34,23 @@ useEffect(() => {
 
   //this will run first 
   return (
-    <Carousel
-      withIndicators
-      height={600}
-      slideSize={{ base: "100%", sm: "50%", md: "33.333333%" }}
-      slideGap={{ base: 0, sm: "md" }}
-      loop
-      align="start"
-    >
-      {lowCalData &&
-        lowCalData.map((recipe: any, index: number) => (
-          <LowCalCard key={index} data={recipe} />
-        ))}
-    </Carousel>
+    <div className="w-screen">
+      <Carousel
+        withIndicators
+        height={400}
+        slideSize={{ base: "100%", sm: "50%", md: "33.333333%" }}
+        slideGap={{ base: 0, sm: "md" }}
+        loop
+        align="start"
+      >
+        {lowCalData &&
+          lowCalData.map((recipe: any, index: number) => (
+            <Carousel.Slide>
+              <LowCalCard key={index} data={recipe} />
+            </Carousel.Slide>
+          ))}
+      </Carousel>
+    </div>
   );
 }
 
