@@ -6,23 +6,33 @@ import { getRecipes } from '../../api/getRecipes'; //importing the API func
 
 function RecipeCarousel() {
   //store data here
-  const [data, setData] = useState<any>(null);
   const[lowCalData, setLowCalData] = useState<any>(null);
+  const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     //function to fetch data
     const fetchData = async () => {
       const recipes = await getRecipes(); // Call the API function
-      setData(recipes); //setting the data
-      setLowCalData(data.filter((recipe: any) => recipe.caloriesPerServing < 300)
-      );
+      //filtering data set to retrieve low calorie recipes 
+      const lowCalRecipes = recipes.filter(
+        (recipe: any) => recipe.caloriesPerServing < 300);
+      setLowCalData(lowCalRecipes);
+      setLoading(false); // Set loading to false when data fetching is complete;
     };
      fetchData();
   }, []);
 
-  if (lowCalData === null) {
+
+useEffect(() => {
+  console.log("low cal data", lowCalData);
+}, [lowCalData]);
+
+
+  if (loading) {
     return <div>Loading...</div>
   }
+
+  //this will run first 
   return (
     <Carousel
       withIndicators
@@ -32,12 +42,10 @@ function RecipeCarousel() {
       loop
       align="start"
     >
-      <Carousel.Slide>
-        {lowCalData && 
+      {lowCalData &&
         lowCalData.map((recipe: any, index: number) => (
-          <LowCalCard key={index} data={recipe}/>
+          <LowCalCard key={index} data={recipe} />
         ))}
-      </Carousel.Slide>
     </Carousel>
   );
 }

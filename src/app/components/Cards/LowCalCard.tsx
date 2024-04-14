@@ -2,25 +2,20 @@ import { Card, Image, Text, Badge, Button, Group } from "@mantine/core";
 import { RecipeData } from "../../types";
  
 
-const LowCalCard: React.FC<RecipeData> = ({
-name,
-caloriesPerServing,
-image, 
-
-}) => {
+const LowCalCard: React.FC<RecipeData> = ({data}) => {
   return (
     <Card shadow="sm" padding="lg" radius="md" withBorder>
       <Card.Section component="a" href="/">
         <Image
-          src={image}
+          src={data.image}
           height={160}
-          alt=""
+          alt="recipe image"
         />
       </Card.Section>
 
       <Group justify="space-between" mt="md" mb="xs">
-        <Text fw={500}>{name}</Text>
-        <Badge color="pink">{caloriesPerServing}</Badge>
+        <Text fw={500}>{data.name}</Text>
+        <Badge color="pink">{data.caloriesPerServing}</Badge>
       </Group>
 
       <Text size="sm" c="dimmed">
