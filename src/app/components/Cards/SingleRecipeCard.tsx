@@ -50,7 +50,7 @@ const SingleRecipeCard: React.FC<RecipeData> = ({
             </h1>
           </div>
           <div className="p-10 w-full items-center flex flex-row justify-evenly dish-details h-full">
-            <div className="flex flex-col justify-center items-center mb-2 w-fit p-2 border-gray-200 bg-slate-50 rounded-full border-b text-sm ">
+            <div className="flex flex-col justify-center items-center mb-2 w-fit px-4 py-8 border-gray-200 bg-slate-50 rounded-full border-b text-sm ">
               <IoFastFoodOutline />
               {caloriesPerServing} cals
             </div>

@@ -16,8 +16,8 @@ const NavBar = () => {
   }
 
   return (
-    <div className="top-0 bg-white">
-      <nav className="h-full hidden md:flex text-black bg-opacity-10 w-full z-10 shadow-md sm:flex-row flex-col justify-evenly items-center ">
+    <div className="top-0 bg-transparent">
+      <nav className="h-fit hidden md:flex text-white bg-opacity-10 w-full z-10 p-4 sm:flex-row flex-col justify-evenly items-center bg-transparent absolute font-bold bg-gradient-to-b from-black to-transparent h-40 w-full">
         <Link href="/">
           <img src="/images/logo.png" className="text-xl w-32 h-14"></img>
         </Link>

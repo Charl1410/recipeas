@@ -2,7 +2,11 @@ import { Card, Image, Text, Badge, Button, Group } from "@mantine/core";
 import { RecipeData } from "../../types";
  
 
-const LowCalCard: React.FC<RecipeData> = ({data}) => {
+interface LowCalCardProps {
+  data: RecipeData;
+}
+
+const LowCalCard: React.FC<LowCalCardProps> = ({data}) => {
   return (
     <Card
       shadow="sm"

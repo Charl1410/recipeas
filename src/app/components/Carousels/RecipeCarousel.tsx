@@ -34,7 +34,7 @@ useEffect(() => {
 
   //this will run first 
   return (
-    <div className="w-screen">
+    <div className="w-full">
       <Carousel
         withIndicators
         height={400}

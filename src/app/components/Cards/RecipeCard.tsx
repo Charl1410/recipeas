@@ -45,7 +45,7 @@ const RecipeCard: React.FC<RecipeCardProps> = ({data}) => {
             {data ? <h1>{data.caloriesPerServing}</h1> : "Loading..."}
             cal
           </p>
-          <div className="mt-2 flex justify-center items-center">
+          <div className="mt-2 flex justify-star items-center">
             <ViewRecipeButton id={data.id} />
             <button>
               <FaHeart className="ml-4" />

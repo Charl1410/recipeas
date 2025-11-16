@@ -7,7 +7,7 @@ const DishTypeBanner = () => {
 
 
   return (
-    <div className="border-2 w-full m-6 h-48 hidden md:flex flex-row justify-evenly items-center shadow-lg">
+    <div className="border-2 m-6 h-48 hidden md:flex flex-row justify-evenly items-center">
       <div className="transform hover:scale-110 transition-transform duration-300 relative items-center flex justify-center text-center rounded-full w-36 h-36 overflow-hidden">
         <img
           className="w-full h-full object-cover"
