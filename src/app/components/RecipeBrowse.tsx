@@ -5,7 +5,11 @@ import { useState, useEffect } from "react";
 import { getRecipes } from '../api/getRecipes'; //importing the API func
 
 
-const RecipeBrowse: React.FC = () => {
+type RecipeBrowseProps = {
+  limit?: number;
+}
+
+const RecipeBrowse: React.FC<RecipeBrowseProps> = ({limit = 10}) => {
 
   //store data here
   const [RecipeCardData, setData] = useState<any>(null);
@@ -19,10 +23,6 @@ const RecipeBrowse: React.FC = () => {
 
     fetchData();
   }, []);
-
-  // if (RecipeCardData === undefined) {
-  //   return null;
-  // }
 
   return (
     <>

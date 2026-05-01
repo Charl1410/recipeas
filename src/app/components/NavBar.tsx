@@ -17,33 +17,36 @@ const NavBar = () => {
 
   return (
     <div className="top-0 bg-transparent">
-      <nav className="h-fit hidden md:flex text-white bg-opacity-10 w-full z-10 p-4 sm:flex-row flex-col justify-evenly items-center bg-transparent absolute font-bold bg-gradient-to-b from-black to-transparent h-40 w-full">
+      <nav className="h-fit hidden md:flex text-white bg-opacity-10 w-full z-10 p-4 sm:flex-row flex-col justify-between items-center bg-transparent absolute font-bold bg-gradient-to-b from-black to-transparent h-40 w-8/12">
         <Link href="/">
           <img src="/images/logo.png" className="text-xl w-32 h-14"></img>
         </Link>
-        <ul className="flex-end flex sm:flex-row flex-col items-center justify-evenly w-8/12 md:w-full">
-          <Link href="/recipes">
-            <li>Recipes</li>
-          </Link>
-          <Link href="/discover">
-            <li>Discover All Recipes</li>
-          </Link>
-          <Link href="/favourites">
-            <li>My favourites</li>
-          </Link>
-          <Link href="/contact">
-            <li>Contact Me</li>
-          </Link>
-        </ul>
-        <SearchBar />
-        <button
-          type="button"
-          className=" m-2 w-24 h-10 text-xs text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-lg px-5 py-2.5 text-center me-2 mb-2"
-        >
-          Log in
-        </button>
-
-        <MdAccountCircle style={{ color: "#cfcfcf", fontSize: "50px" }} />
+        <div className="flex flex-row justify-between items-center w-6/12">
+          <ul className="flex-end flex sm:flex-row flex-col items-center justify-evenly w-8/12 md:w-full">
+            <Link href="/recipes">
+              <li>Recipes</li>
+            </Link>
+            <Link href="/discover">
+              <li>Discover All Recipes</li>
+            </Link>
+            <Link href="/favourites">
+              <li>My favourites</li>
+            </Link>
+            <Link href="/contact">
+              <li>Contact Me</li>
+            </Link>
+          </ul>
+          <div className="flex flex-row items-center ">
+            <SearchBar />
+            <button
+              type="button"
+              className=" m-2 w-24 h-10 text-xs text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-lg px-5 py-2.5 text-center me-2 mb-2"
+            >
+              Log in
+            </button>
+            <MdAccountCircle style={{ color: "#cfcfcf", fontSize: "50px" }} />
+          </div>
+        </div>
       </nav>
 
       <div className="relative hamburgerMenu flex flex-col justify-between items-center md:hidden border-b border-slate-200 w-full bg-white h-full ">

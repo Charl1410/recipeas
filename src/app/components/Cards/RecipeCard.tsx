@@ -13,9 +13,9 @@ interface RecipeCardProps {
 const RecipeCard: React.FC<RecipeCardProps> = ({data}) => {
   return (
     <>
-      <div className="m-3 w-full md:w-80 h-fit rounded-md shadow-md">
+      <div className="m-3 w-full md:w-80 rounded-md shadow-md ">
         <div className="h-36 md:h-full overflow-hidden flex items-center justify-center">
-          <img className="rounded" src={data.image} alt="recipe image" />
+          <img className="rounded h-[200px] w-full object-cover" src={data.image} alt="recipe image" />
         </div>
         <div className="p-4">
           <div className="font-bold border-b border-gray-300">

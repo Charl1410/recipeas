@@ -12,7 +12,7 @@
   * [Questions](#Questions)
   
 ## Description
-I am currently working on a small nextjs application to display recipes! This application will be able to filter recipes based on a variation of different criteria such as:
+This application 
 
 * Level of difficulty
 * Cooking time
