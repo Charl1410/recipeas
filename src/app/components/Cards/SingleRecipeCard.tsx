@@ -1,15 +1,11 @@
 import React from 'react'
-import { RecipeData } from '../../types';
+import { SingleRecipeCardProps } from '../../types';
 import Link from 'next/link';
 import { IoIosArrowRoundBack } from "react-icons/io";
 import { IoFastFoodOutline, IoTimerOutline } from "react-icons/io5";
 import { FaRegFlag } from "react-icons/fa";
 
-
-
-
-
-const SingleRecipeCard: React.FC<RecipeData> = ({
+const SingleRecipeCard: React.FC<SingleRecipeCardProps> = ({
   name,
   cuisine,
   prepTimeMinutes,
@@ -22,47 +18,35 @@ const SingleRecipeCard: React.FC<RecipeData> = ({
 }) => {
   return (
     <div className="bg-slate-100 h-full flex-col flex items-center justify-center">
-      <div className="flex flex-row">
-        <Link href="/">
-          <p className="flex flex-row items-center justify-center">
-            <IoIosArrowRoundBack
-              style={{ color: "black", fontSize: "30px" }}
-              className="mr-2"
-            />
-            Back to home
-          </p>
-        </Link>
-      </div>
-
-      <div className="bg-white mb-10 gbg-white w-11/12 h-full flex flex-col md:flex-row shadow-lg">
-        <div className="image h-full w-full md:w-4/12 md:h-full">
+      <div className=" mb-10 gbg-white w-full h-full flex flex-col md:flex-col items-center justify-center">
+        <div className="image w-full max-h-[500px] overflow-hidden">
           <img
-            className=" w-full h-full object-cover"
+            className="w-full h-full max-h-[500px] object-cover"
             src={image}
             alt="recipe image"
           />
           <div className="">{rating}</div>
         </div>
-        <div className="p-6 recipe h-full w-full md:w-8/12">
+        <div className="p-6 recipe h-full w-full md:w-4/5 bg-white mt-[-100px] rounded-xl shadow-lg">
           <div className="bg-white flex flex-col h-full mt-4 w-full">
             <h1 className="text-center w-full flex justify-center items-center text-4xl font-bold border-b border-gray-400">
               {name}
             </h1>
           </div>
-          <div className="p-10 w-full items-center flex flex-row justify-evenly dish-details h-full">
-            <div className="flex flex-col justify-center items-center mb-2 w-fit px-4 py-8 border-gray-200 bg-slate-50 rounded-full border-b text-sm ">
+          <div className="p-10 w-full items-center flex flex-row gap-4 dish-details h-full">
+            <div className="flex flex-row justify-center items-center mb-2 w-fit py-2 px-4 border-gray-200 bg-slate-50 rounded-full border-b text-sm gap-1">
               <IoFastFoodOutline />
               {caloriesPerServing} cals
             </div>
-            <div className="flex flex-col justify-center items-center mb-2 w-fit p-2 border-gray-200 bg-slate-50 rounded-full border-b text-sm">
+            <div className="flex flex-row justify-center items-center mb-2 w-fit py-2 px-4 border-gray-200 bg-slate-50 rounded-full border-b text-sm gap-1">
               <IoTimerOutline />
               {prepTimeMinutes} mins prep time
             </div>
-            <div className="flex flex-col justify-center items-center mb-2 w-fit p-2 border-gray-200 bg-slate-50 rounded-full border-b text-sm">
+            <div className="flex flex-row justify-center items-center mb-2 w-fit py-2 px-4 border-gray-200 bg-slate-50 rounded-full border-b text-sm gap-1">
               <IoTimerOutline />
               {cookTimeMinutes} mins cook time
             </div>
-            <div className="flex flex-col justify-center items-center mb-2 w-fit p-2 border-gray-200 bg-slate-50 rounded-full border-b text-sm">
+            <div className="flex flex-row justify-center items-center mb-2 w-fit py-2 px-4 border-gray-200 bg-slate-50 rounded-full border-b text-sm gap-1">
               <FaRegFlag />
 
               {cuisine}

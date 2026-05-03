@@ -13,8 +13,7 @@ function RecipeCarousel() {
     //function to fetch data
     const fetchData = async () => {
       const recipes = await getRecipes(); // Call the API function
-      //filtering data set to retrieve low calorie recipes 
-      const lowCalRecipes = recipes.filter(
+      const lowCalRecipes = recipes.filter( //filtering data set to retrieve low calorie recipes 
         (recipe: any) => recipe.caloriesPerServing < 300);
       setLowCalData(lowCalRecipes);
       setLoading(false); // Set loading to false when data fetching is complete;

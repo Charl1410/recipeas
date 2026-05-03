@@ -24,3 +24,16 @@ export interface Params {
 export interface SingleRecipeProps {
   params: Params;
 }
+
+export type SingleRecipeCardProps = Pick<
+  RecipeData,
+  | "name"
+  | "cuisine"
+  | "prepTimeMinutes"
+  | "cookTimeMinutes"
+  | "caloriesPerServing"
+  | "instructions"
+  | "ingredients"
+  | "image"
+  | "rating"
+>;

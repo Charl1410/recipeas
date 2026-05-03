@@ -21,14 +21,9 @@ const LowCalCard: React.FC<LowCalCardProps> = ({data}) => {
       </Card.Section>
 
       <Group justify="space-between" mt="md" mb="xs">
-        <Text color="dimmed" fw={500}>{data.name}</Text>
-        <Badge color="pink">{data.caloriesPerServing}</Badge>
+        <Text c="white" fw={500}>{data.name}</Text>
+        <Badge color="pink" c="white">{data.caloriesPerServing} Calories</Badge>
       </Group>
-
-      <Text size="sm" c="dimmed">
-        With Fjord Tours you can explore more of the magical fjord landscapes
-        with tours and activities on and around the fjords of Norway
-      </Text>
 
       <Button color="blue" fullWidth mt="md" radius="md">
         View full recipe
