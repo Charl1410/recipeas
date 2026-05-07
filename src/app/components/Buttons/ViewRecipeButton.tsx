@@ -3,10 +3,12 @@ import React from "react";
 import { useRouter } from "next/navigation";
 import { RecipeData } from "@/app/types";
 
-type ViewRecipeButtonProps = Pick<RecipeData, "id">;
+type ViewRecipeButtonProps = Pick<RecipeData, "id"> & {
+  className?: string;
+};
 
 //this function will take in the id of the recipe 
-const ViewRecipeButton: React.FC<ViewRecipeButtonProps> = ({ id }) => {
+const ViewRecipeButton: React.FC<ViewRecipeButtonProps> = ({ id, className }) => {
 
     //this will change the route taking in the id as a prop
     const router = useRouter()
@@ -14,8 +16,15 @@ const ViewRecipeButton: React.FC<ViewRecipeButtonProps> = ({ id }) => {
         router.push(`/recipes/${id}`)
     }
 
+  const baseClassName =
+    "text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2";
+
   return (
-    <button onClick={handleClick} type="button" className="text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+    <button
+      onClick={handleClick}
+      type="button"
+      className={[baseClassName, className].filter(Boolean).join(" ")}
+    >
       View full Recipe</button>
 
   );

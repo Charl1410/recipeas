@@ -17,7 +17,7 @@ const DiscoverPage = () => {
         <DropDown label={"Difficulty"} />
         <DropDown label={"Meal Type"} />
       </div>
-      <RecipeBrowse />
+      <RecipeBrowse limit={100} />
       <Popover />
     </div>
   );

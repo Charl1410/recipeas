@@ -36,11 +36,16 @@ useEffect(() => {
     <div className="w-full">
       <Carousel
         withIndicators
-        height={400}
-        slideSize={{ base: "100%", sm: "50%", md: "33.333333%" }}
+        height={500}
+        slideSize={{ base: "100%", sm: "50%", md: "20%" }}
         slideGap={{ base: 0, sm: "md" }}
         loop
         align="start"
+        classNames={{
+          indicators: "mt-4 flex flex-wrap justify-center gap-2",
+          indicator:
+            "h-2.5 w-2.5 rounded-full !bg-gray-400 transition-colors hover:!bg-gray-500 data-[active]:!bg-neutral-900 data-[active]:w-6",
+        }}
       >
         {lowCalData &&
           lowCalData.map((recipe: any, index: number) => (
