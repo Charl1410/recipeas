@@ -1,7 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-
-
+import Image from 'next/image';
 
 const MealTypeOptions = () => {
   return (
@@ -13,10 +12,12 @@ const MealTypeOptions = () => {
       <div className="flex flex-row flex-wrap justify-center items-center">
         <Link className="m-2" href="/recipes/meal-type/breakfast">
         <div className="hover:transform hover:-translate-y-2 transition-transform duration-300 ease-in-out relative h-36 md:h-96 w-full hover:cursor-pointer">
-          <img
-            className="w-full h-full object-cover rounded-xl"
+          <Image
+            className="object-cover rounded-xl"
             src="/images/breakfast.jpeg"
             alt="breakfast"
+            fill
+            sizes="(max-width: 768px) 100vw, 25vw"
           />
           <h2 className="absolute inset-0 flex items-center justify-center text-white text-4xl font-bold bg-black/20 rounded-xl">
             Breakfast
@@ -25,10 +26,12 @@ const MealTypeOptions = () => {
         </Link>
         <Link className="m-2" href="/recipes/meal-type/lunch">
         <div className="hover:transform hover:-translate-y-2 transition-transform duration-300 ease-in-out relative h-36 md:h-96 w-full hover:cursor-pointer">
-          <img
-            className="w-full h-full object-cover rounded-xl"
+          <Image
+            className="object-cover rounded-xl"
             src="/images/lunch.jpeg"
-            alt="breakfast"
+            alt="lunch"
+            fill
+            sizes="(max-width: 768px) 100vw, 25vw"
           />
           <h2 className="absolute inset-0 flex items-center justify-center text-white text-4xl font-bold bg-black/20 rounded-xl">
             Lunch
@@ -37,10 +40,12 @@ const MealTypeOptions = () => {
         </Link>
         <Link className="m-2" href="/recipes/meal-type/dinner">
         <div className="hover:transform hover:-translate-y-2 transition-transform duration-300 ease-in-out relative h-36 md:h-96 w-full  mr-6 hover:cursor-pointer">
-          <img
-            className="w-full h-full object-cover rounded-xl"
+          <Image
+            className="object-cover rounded-xl"
             src="/images/dinner.jpeg"
-            alt="breakfast"
+            alt="dinner"
+            fill
+            sizes="(max-width: 768px) 100vw, 25vw"
           />
           <h2 className="absolute inset-0 flex items-center justify-center text-white text-4xl font-bold bg-black/20 rounded-xl">
             Dinner
@@ -49,10 +54,12 @@ const MealTypeOptions = () => {
         </Link>
         <Link className="m-2" href="/recipes/meal-type/snacks">
         <div className="hover:transform hover:-translate-y-2 transition-transform duration-300 ease-in-out relative h-36 md:h-96 w-full hover:cursor-pointer">
-          <img
-            className="w-full h-full object-cover rounded-xl"
+          <Image
+            className="object-cover rounded-xl"
             src="/images/snacks.jpeg"
-            alt="breakfast"
+            alt="snacks"
+            fill
+            sizes="(max-width: 768px) 100vw, 25vw"
           />
           <h2 className="absolute inset-0 flex items-center justify-center text-white text-4xl font-bold bg-black/20 rounded-xl ">
             Snacks

@@ -36,11 +36,14 @@ This application is using:
 ## User Story
 
  * Users should be able to enter the application and be able to navigate to recipeas based on meal type and cuisine
+ * Users should be able to filter recipes 
  * Users will have an account section
  * Users are able to see all recpies and filter based on different criteria
  * Users should be able to fill out a contact form that build a local JSON file of responses
  * Users will be able to have their own account where their favourite meals are stores 
  * Users should be able to add recipes to a favourites section 
+ * Users should be able to log in and have a user portal area where they can see their favourite recipes 
+ * 
  
 
 ## Acceptance Criteria

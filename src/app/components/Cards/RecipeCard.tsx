@@ -4,6 +4,7 @@ import { FaHeart } from "react-icons/fa";
 import StarRating from '../StarRating';
 import { RecipeData } from '@/app/types';
 import ViewRecipeButton from '../Buttons/ViewRecipeButton';
+import Image from 'next/image';
 
 //passing in the data types into the component 
 interface RecipeCardProps {
@@ -14,8 +15,14 @@ const RecipeCard: React.FC<RecipeCardProps> = ({data}) => {
   return (
     <>
       <div className="m-3 w-full md:w-80 rounded-md m-3 w-full md:w-80 shadow-[0px_8px_24px_rgba(149,157,165,0.2)]">
-        <div className="h-36 md:h-full overflow-hidden flex items-center justify-center relative">
-          <img className="rounded h-[200px] w-full object-cover" src={data.image} alt="recipe image" />
+        <div className="h-[200px] overflow-hidden flex items-center justify-center relative">
+          <Image
+            className="rounded object-cover"
+            src={data.image}
+            alt="recipe image"
+            fill
+            sizes="(max-width: 768px) 100vw, 320px"
+          />
           <button
             type="button"
             aria-label="Add to favourites"
