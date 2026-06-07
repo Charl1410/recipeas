@@ -2,6 +2,7 @@
 
 import React from 'react'
 import DishVariation from './DishVariation';
+import Image from 'next/image';
 
 const DishTypeBanner = () => {
 
@@ -9,7 +10,9 @@ const DishTypeBanner = () => {
   return (
     <div className="m-6 h-48 hidden md:flex flex-row justify-evenly items-center">
       <div className="transform hover:scale-110 transition-transform duration-300 relative items-center flex justify-center text-center rounded-full w-36 h-36 overflow-hidden">
-        <img
+          <Image
+          width={100}
+          height={100}
           className="w-full h-full object-cover"
           src="/images/chinese.jpeg"
           alt=""
@@ -17,7 +20,9 @@ const DishTypeBanner = () => {
         <p className="absolute text-white font-bold">Chinese</p>
       </div>
       <div className="transform hover:scale-110 transition-transform duration-300 relative items-center flex justify-center text-center rounded-full w-36 h-36 overflow-hidden">
-        <img
+        <Image
+          width={100}
+          height={100}
           className="w-full h-full object-cover"
           src="/images/japanese.jpeg"
           alt=""
@@ -25,7 +30,9 @@ const DishTypeBanner = () => {
         <p className="absolute text-white font-bold">Japanese</p>
       </div>
       <div className="transform hover:scale-110 transition-transform duration-300 relative items-center flex justify-center text-center rounded-full w-36 h-36 overflow-hidden">
-        <img
+        <Image
+          width={100}
+          height={100}
           className="w-full h-full object-cover"
           src="/images/thai.jpeg"
           alt=""
@@ -33,7 +40,9 @@ const DishTypeBanner = () => {
         <p className="absolute text-white font-bold">Thai</p>
       </div>
       <div className="transform hover:scale-110 transition-transform duration-300 relative items-center flex justify-center text-center rounded-full w-36 h-36 overflow-hidden">
-        <img
+        <Image
+          width={100}
+          height={100}
           className="w-full h-full object-cover"
           src="/images/roast.jpeg"
           alt=""
@@ -41,7 +50,9 @@ const DishTypeBanner = () => {
         <p className="absolute text-white font-bold">British</p>
       </div>
       <div className="transform hover:scale-110 transition-transform duration-300 relative items-center flex justify-center text-center rounded-full w-36 h-36 overflow-hidden">
-        <img
+        <Image
+          width={100}
+          height={100}
           className="w-full h-full object-cover"
           src="/images/pizza.jpeg"
           alt=""
@@ -49,7 +60,9 @@ const DishTypeBanner = () => {
         <p className="absolute text-white font-bold">Italian</p>
       </div>
       <div className="relative items-center flex justify-center text-center rounded-full w-36 h-36 overflow-hidden">
-        <img
+        <Image
+          width={100}
+          height={100}
           className="w-full h-full object-cover"
           src="/images/pizza.jpeg"
           alt=""

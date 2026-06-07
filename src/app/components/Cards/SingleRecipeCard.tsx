@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { IoIosArrowRoundBack } from "react-icons/io";
 import { IoFastFoodOutline, IoTimerOutline } from "react-icons/io5";
 import { FaRegFlag } from "react-icons/fa";
+import Image from 'next/image';
 
 const SingleRecipeCard: React.FC<SingleRecipeCardProps> = ({
   name,
@@ -19,11 +20,13 @@ const SingleRecipeCard: React.FC<SingleRecipeCardProps> = ({
   return (
     <div className="bg-slate-100 h-full flex-col flex items-center justify-center">
       <div className=" mb-10 gbg-white w-full h-full flex flex-col md:flex-col items-center justify-center">
-        <div className="image w-full max-h-[500px] overflow-hidden">
-          <img
-            className="w-full h-full max-h-[500px] object-cover"
+        <div className="image w-full max-h-[500px] overflow-hidden relative h-[500px]">
+          <Image
+            className="object-cover"
             src={image}
             alt="recipe image"
+            fill
+            sizes="100vw"
           />
           <div className="">{rating}</div>
         </div>

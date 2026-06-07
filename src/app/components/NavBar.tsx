@@ -5,6 +5,7 @@ import { MdAccountCircle } from "react-icons/md";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useState } from 'react';
 import { RxCross1 } from "react-icons/rx";
+import Image from 'next/image';
 
 const NavBar = () => {
   const [isClicked, setIsCliked] = useState(false);
@@ -19,7 +20,7 @@ const NavBar = () => {
     <div className="top-0 bg-transparent">
       <nav className="h-fit hidden md:flex text-white bg-opacity-10 w-full z-20 p-4 sm:flex-row flex-col justify-between items-center bg-transparent absolute font-bold bg-gradient-to-b from-black to-transparent h-40 w-8/12">
         <Link href="/">
-          <img src="/images/logo.png" className="text-xl w-32 h-14"></img>
+          <Image src="/images/logo.png" className="text-xl w-32 h-14" width={128} height={56} alt="Recipeas logo" />
         </Link>
         <div className="flex flex-row justify-between items-center w-6/12">
           <ul className="font-medium flex-end flex sm:flex-row flex-col items-center justify-evenly w-8/12 md:w-full">
