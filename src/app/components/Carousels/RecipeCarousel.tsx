@@ -49,8 +49,8 @@ useEffect(() => {
       >
         {lowCalData &&
           lowCalData.map((recipe: any, index: number) => (
-            <Carousel.Slide>
-              <LowCalCard key={index} data={recipe} />
+            <Carousel.Slide key={index}>
+              <LowCalCard data={recipe} />
             </Carousel.Slide>
           ))}
       </Carousel>
