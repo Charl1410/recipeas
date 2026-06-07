@@ -3,7 +3,11 @@ import { setServers } from 'dns';
 import React from 'react'
 import { useState } from 'react'
 
-const DropDown = ({label}) => {
+type DropDownProps = {
+  label: string;
+}
+
+const DropDown: React.FC<DropDownProps> = ({label}) => {
     const [active, setActive] = useState(false);
 
     const handleClick = () => {
