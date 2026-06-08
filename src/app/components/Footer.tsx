@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image';
 
 const Footer = () => {
   return (
@@ -59,7 +60,7 @@ const Footer = () => {
       <div className="mx-6 py-10 text-center md:text-left flex justify-evenly">
         <div className="w-8/12   grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="flex justify-center flex-col text-center w-6/12">
-            <img src="/images/titleLogo.png" alt="logo" />
+            <Image src="/images/titleLogo.png" alt="logo" width={200} height={80} />
             <p>Here to help you find all your favourite recipes!</p>
           </div>
           <div>

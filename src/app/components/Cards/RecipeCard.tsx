@@ -2,7 +2,7 @@
 import React from 'react'
 import { FaHeart } from "react-icons/fa";
 import StarRating from '../StarRating';
-import { RecipeData } from '@/app/types';
+import { RecipeData } from '../../types';
 import ViewRecipeButton from '../Buttons/ViewRecipeButton';
 import Image from 'next/image';
 
